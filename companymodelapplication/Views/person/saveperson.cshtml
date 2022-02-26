@@ -1,0 +1,62 @@
+﻿@model companymodelapplication.person
+
+@{
+    ViewBag.Title = "saveperson";
+}
+
+@using (Html.BeginForm("saveperson", "person", FormMethod.Post)) 
+{
+<div id="person">
+
+    <div class="row">
+        <div class="col-sm-6">
+            @Html.LabelFor(m => m.personid)
+        </div>
+        <div class="col-sm-6">
+            @Html.TextBoxFor(m => m.personid)
+        </div>
+        @Html.ValidationMessageFor(m => m.personid)
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            @Html.LabelFor(m => m.name)
+        </div>
+        <div class="col-sm-6">
+            @Html.TextBoxFor(m => m.name)
+        </div>
+        @Html.ValidationMessageFor(m => m.name)
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            @Html.LabelFor(m => m.address)
+        </div>
+        <div class="col-sm-6">
+            @Html.TextBoxFor(m => m.address)
+        </div>
+        @Html.ValidationMessageFor(m => m.address)
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            @Html.LabelFor(m => m.salary)
+        </div>
+        <div class="col-sm-6">
+            @Html.TextBoxFor(m => m.salary)
+        </div>
+        @Html.ValidationMessageFor(m => m.salary)
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <button type="submit">submit</button>
+        </div>
+    </div>
+    @section scripts
+    {
+        @Scripts.Render("~/bundels/jqueryval")
+
+        }
+
+
+
+</div>
+}
+
