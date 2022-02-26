@@ -90,5 +90,9 @@ namespace companymodelapplication.Controllers
                 return View();
             }
         }
+        public ActionResult index1()
+        {
+            return View();
+        }
     }
 }
